@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --orange: #ff7800;
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: 0.2rem solid var(--black);
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 70%;
+  /* overflow: hidden; */
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  background: #eee;
+}
+
+
+.header {
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.header .logo i {
+  color: var(--orange);
+}
+
+.header div {
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--black);
+}
+
+.header div:hover {
+  color: var(--orange);
+}
+
+.header .search-form{
+  height: 4.5rem;
+  width: 50rem;
+  line-height: 2rem;
+  border-radius: 2rem;
+  background: #eee;
+  color: var(--black);
+  font-size: 2rem;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+
+}
+
+.header .search-form input { 
+  height: 100%;
+  width: 100%;
+  background: #eee ;
+  text-transform: none;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 0 1.5rem;
+}
+
+
+.header .search-form button {
+  font-size: 2.2rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.header .icons div{
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 4.5rem;
+  background: #eee;
+  color: var(--black);
+  font-size: 2rem;
+  margin-right: 0.3rem;
+  text-align: center;
+}
+
+.header .icons div:hover {
+  background: var(--orange);
+  color: #eee;
+  cursor: pointer;
+}
+
+
+#search-btn {
+  display: none;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 4.5rem;
+  background: #eee;
+  color: var(--black);
+  font-size: 2rem;
+  margin-right: 0.3rem;
+  text-align: center;
+}
+
+
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./img/grocery.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 19rem;
+  padding-bottom: 10rem;
+}
+
+.home .content {
+  text-align: center;
+  width: 60rem;
+}
+
+.home .content h3 {
+  color: var(--black);
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.home .content h3 span {
+  color: var(--orange);
+}
+
+.home .content p {
+  color: var(--light-color);
+  font-size: 1.7rem;
+}
+
+.home .content a {
+  border-color: #130f40;
+  font-size: 1.5rem;
+}
+
+.home .content a:hover {
+  background: var(--orange);
+  color: #eee;
+}
+
+#daftar span{
+  background-color: var(--orange);
+  color: #fff;
+  display: inline-block;
+  clip-path: polygon(100% 10%, 90% 50%, 100% 99%, 0% 100%, 10% 50%, 0% 10%);
+  padding: 1.5rem;
+}
+
+
+@media (max-width : 991px){
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding :2rem;
+  }
+}
+
+@media (max-width : 860px) {
+
+  html {
+    font-size: 40%;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 110%; right: -50rem;
+    width: 30rem;
+    box-shadow: white;
+    border-radius: 2rem;
+  }
+
+  .header .navbar .active {
+    right: 3rem;
+    transition: 0.4s linear;
+  }
+
+  #search-btn {
+    display: inline-block;
+  }
+
+
+}
+
+
+
+
+
+
